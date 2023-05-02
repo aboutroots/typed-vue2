@@ -1,0 +1,43 @@
+/* eslint-disable no-shadow */
+import { Item } from '@/modules/Item';
+
+export interface State {
+  items: Item[];
+  cartItems: Item[];
+  category: Item['category'] | null;
+}
+
+export enum GetterTypes {
+  ITEMS = 'ITEMS',
+  CART_ITEMS = 'CART_ITEMS',
+  NUMBER_OF_ITEMS_IN_CART = 'NUMBER_OF_ITEMS_IN_CART',
+  NUMBER_OF_ITEMS = 'NUMBER_OF_ITEMS',
+  ITEMS_IN_ACTIVE_CATEGORY = 'ITEMS_IN_ACTIVE_CATEGORY',
+  CART_PRICE = 'CART_PRICE',
+  DISCOUNT = 'DISCOUNT',
+  GET_ITEM_NAME_BY_ID = 'GET_ITEM_NAME_BY_ID',
+  ITEMS_BY_CATEGORY = 'ITEMS_BY_CATEGORY',
+  CATEGORIES = 'CATEGORIES',
+  ACTIVE_CATEGORY_INDEX = 'ACTIVE_CATEGORY_INDEX',
+  IS_IN_CART = 'IS_IN_CART',
+  CART_PRICE_POST_DISCOUNT = 'CART_PRICE_POST_DISCOUNT',
+}
+
+export enum MutationTypes {
+  SET_ITEMS = 'SET_ITEMS',
+  SET_CART_ITEMS = 'SET_CART_ITEMS',
+  ADD_ITEM_TO_CART = 'ADD_ITEM_TO_CART',
+  REMOVE_ITEM_FROM_CART = 'REMOVE_ITEM_FROM_CART',
+  SET_CATEGORY = 'SET_CATEGORY',
+}
+
+export enum ActionTypes {
+  FETCH_ITEMS = 'FETCH_ITEMS',
+  ADD_TO_CART = 'ADD_TO_CART',
+  REMOVE_FROM_CART = 'REMOVE_FROM_CART',
+  SET_CATEGORY_BY_INDEX = 'SET_CATEGORY_BY_INDEX',
+}
+
+export enum VueWaitKeys {
+  ITEMS_LOADING = 'ITEMS_LOADING',
+}
